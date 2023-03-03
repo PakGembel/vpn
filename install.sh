@@ -1,6 +1,6 @@
 ##upgrade
 clear
-echo Installing Websocket-SSH Python
+echo V2Ray + SSH WebSocket
 sleep 1
 echo Check Access Rights...
 sleep 0.5
