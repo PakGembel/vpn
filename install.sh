@@ -15,7 +15,7 @@ apt install certbot python-certbot-nginx -y
 certbot --nginx
 
 wget https://raw.githubusercontent.com/PakGembel/vpn/main/v2ray.sh
-bash install-release.sh
+bash v2ray.sh
 systemctl enable v2ray
 systemctl start v2ray
 cd
