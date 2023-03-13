@@ -20,7 +20,7 @@ systemctl enable v2ray
 systemctl start v2ray
 cd
 cd /usr/local/etc/v2ray/
-wget -O /usr/local/etc/v2ray/config.json https://github.com/PakGembel/vpn/blob/main/config.json
+wget -O /usr/local/etc/v2ray/config.json https://raw.githubusercontent.com/PakGembel/vpn/main/config.json
 
 cd
 cd /etc/systemd/system/
