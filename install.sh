@@ -44,3 +44,6 @@ systemctl restart ws-openssh.service
 
 systemctl restart v2ray
 systemctl restart nginx
+
+wget https://raw.githubusercontent.com/PakGembel/vpn/main/install-udpgw.sh
+bash install-udpgw.sh
