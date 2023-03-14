@@ -10,7 +10,7 @@ apt-get upgrade -y
 apt install nginx -y
 cd
 cd /etc/nginx/sites-available/
-wget -O cd /etc/nginx/sites-available/default https://raw.githubusercontent.com/PakGembel/vpn/main/default
+wget -O /etc/nginx/sites-available/default https://raw.githubusercontent.com/PakGembel/vpn/main/default
 apt install certbot python-certbot-nginx -y
 certbot --nginx
 
