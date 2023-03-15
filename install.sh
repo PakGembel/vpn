@@ -4,6 +4,7 @@ echo V2Ray + SSH WebSocket
 sleep 1
 echo Check Access Rights...
 sleep 0.5
+apt-get update --allow-releaseinfo-change
 apt-get update
 apt-get upgrade -y
 
