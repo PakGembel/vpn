@@ -14,6 +14,7 @@ wget -O /etc/nginx/sites-available/default https://raw.githubusercontent.com/Pak
 apt install certbot python-certbot-nginx -y
 certbot --nginx
 
+cd
 wget https://raw.githubusercontent.com/PakGembel/vpn/main/v2ray.sh
 bash v2ray.sh
 systemctl enable v2ray
