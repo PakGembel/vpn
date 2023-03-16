@@ -7,7 +7,7 @@ sleep 0.5
 apt-get update --allow-releaseinfo-change
 clear
 apt-get update
-apt-get upgrade -y
+##apt-get upgrade -y
 
 apt install nginx -y
 cd
