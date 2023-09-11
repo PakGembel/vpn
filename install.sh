@@ -61,6 +61,7 @@ systemctl enable ws-stunnel
 systemctl start ws-stunnel
 systemctl restart ws-stunnel
 
+systemctl restart dropbear
 systemctl restart v2ray
 systemctl restart nginx
 
