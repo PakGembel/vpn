@@ -10,9 +10,18 @@ apt-get update
 ##apt-get upgrade -y
 
 apt install nginx -y
+apt install dropbear -y
+cd /etc/default/d
+wget -O /etc/default/dropbear https://raw.githubusercontent.com/PakGembel/vpn/main/dropbear
 cd
-cd /etc/nginx/sites-available/
-wget -O /etc/nginx/sites-available/default https://raw.githubusercontent.com/PakGembel/vpn/main/default
+cd /etc/nginx/
+wget -O /etc/nginx/nginx.conf https://github.com/PakGembel/vpn/blob/main/nginx.conf
+cd /etc/nginx/conf.d
+wget -O /etc/nginx/conf.d/vps.conf https://raw.githubusercontent.com/PakGembel/vpn/main/vps.conf
+wget -O /etc/nginx/conf.d/xray.conf https://raw.githubusercontent.com/PakGembel/vpn/main/xray.conf
+
+#cd /etc/nginx/sites-available/
+#wget -O /etc/nginx/sites-available/default https://raw.githubusercontent.com/PakGembel/vpn/main/default
 apt install certbot python-certbot-nginx -y
 certbot --nginx
 
@@ -28,11 +37,14 @@ wget -O /usr/local/etc/v2ray/config.json https://raw.githubusercontent.com/PakGe
 cd
 cd /etc/systemd/system/
 wget -O /etc/systemd/system/ws-openssh.service https://raw.githubusercontent.com/PakGembel/vpn/main/ws-openssh.service
+wget -O /etc/systemd/system/ws-stunnel.service https://raw.githubusercontent.com/PakGembel/vpn/main/ws-stunnel.service
 cd
 cd /usr/local/bin/
 #Install Script Websocket-SSH Python
 wget -O /usr/local/bin/ws-openssh https://raw.githubusercontent.com/PakGembel/vpn/main/ws-openssh.py
+wget -O /usr/local/bin/ws-stunnel https://raw.githubusercontent.com/PakGembel/vpn/main/ws-stunnel
 chmod +x /usr/local/bin/ws-openssh
+chmod +x /usr/local/bin/ws-stunnel
 ##Screen
 apt-get install screen -y
 ##python install
@@ -44,6 +56,9 @@ systemctl daemon-reload
 systemctl enable ws-openssh.service
 systemctl start ws-openssh.service
 systemctl restart ws-openssh.service
+systemctl enable ws-stunnel
+systemctl start ws-stunnel
+systemctl restart ws-stunnel
 
 systemctl restart v2ray
 systemctl restart nginx
