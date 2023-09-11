@@ -15,6 +15,7 @@ cd /etc/default/d
 wget -O /etc/default/dropbear https://raw.githubusercontent.com/PakGembel/vpn/main/dropbear
 cd
 cd /etc/nginx/
+rm -r /etc/nginx/sites-available/default
 wget -O /etc/nginx/nginx.conf https://raw.githubusercontent.com/PakGembel/vpn/main/nginx.conf
 cd /etc/nginx/conf.d
 wget -O /etc/nginx/conf.d/vps.conf https://raw.githubusercontent.com/PakGembel/vpn/main/vps.conf
