@@ -18,9 +18,9 @@ cd /etc/nginx/
 rm -r /etc/nginx/sites-available/default
 wget -O /etc/nginx/nginx.conf https://raw.githubusercontent.com/PakGembel/vpn/main/nginx.conf
 cd /etc/nginx/conf.d
-wget -O /etc/nginx/conf.d/vps.conf https://raw.githubusercontent.com/PakGembel/vpn/main/default
-# wget -O /etc/nginx/conf.d/vps.conf https://raw.githubusercontent.com/PakGembel/vpn/main/vps.conf
-wget -O /etc/nginx/conf.d/xray.conf https://raw.githubusercontent.com/PakGembel/vpn/main/xray.conf
+wget -O /etc/nginx/conf.d/xray.conf https://raw.githubusercontent.com/PakGembel/vpn/main/default
+wget -O /etc/nginx/conf.d/vps.conf https://raw.githubusercontent.com/PakGembel/vpn/main/vps.conf
+# wget -O /etc/nginx/conf.d/xray.conf https://raw.githubusercontent.com/PakGembel/vpn/main/xray.conf
 
 #cd /etc/nginx/sites-available/
 #wget -O /etc/nginx/sites-available/default https://raw.githubusercontent.com/PakGembel/vpn/main/default
