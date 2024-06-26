@@ -24,8 +24,12 @@ wget -O /etc/nginx/conf.d/vps.conf https://raw.githubusercontent.com/PakGembel/v
 
 #cd /etc/nginx/sites-available/
 #wget -O /etc/nginx/sites-available/default https://raw.githubusercontent.com/PakGembel/vpn/main/default
-apt install certbot python-certbot-nginx -y
-certbot --nginx
+#apt install certbot python-certbot-nginx -y
+#certbot --nginx
+
+cd /etc/nginx/
+wget -O /etc/nginx/fullchain.pem https://raw.githubusercontent.com/PakGembel/vpn/main/fullchain.pem
+wget -O /etc/nginx/privkey.pem https://raw.githubusercontent.com/PakGembel/vpn/main/privkey.pem
 
 cd
 wget https://raw.githubusercontent.com/PakGembel/vpn/main/v2ray.sh
