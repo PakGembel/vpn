@@ -69,6 +69,7 @@ systemctl restart ws-stunnel
 systemctl restart dropbear
 systemctl restart v2ray
 systemctl restart nginx
+sudo ufw allow 'Nginx HTTP'
 
 wget https://raw.githubusercontent.com/PakGembel/vpn/main/install-udpgw.sh
 bash install-udpgw.sh
