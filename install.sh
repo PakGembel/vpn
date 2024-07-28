@@ -11,7 +11,7 @@ apt-get update
 
 apt install nginx -y
 apt install dropbear -y
-cd /etc/default/d
+cd /etc/default
 wget -O /etc/default/dropbear https://raw.githubusercontent.com/PakGembel/vpn/main/dropbear
 cd
 cd /etc/nginx/
